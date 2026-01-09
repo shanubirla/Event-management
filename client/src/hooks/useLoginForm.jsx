@@ -31,7 +31,7 @@ const useLoginForm = () => {
   });
 
   const onSubmit = async (data) => {
-    try {
+    try { 
       const response = await axiosInstance.post("/api/auth/login", data);
       const result = await response.data;
        dispatch(login(result));
